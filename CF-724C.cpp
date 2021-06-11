@@ -65,6 +65,10 @@ int main()
         }
         flp(g, sensor.size())
         {
+            if(x == 1 && x == sensor[g][0] && y == 1 && y == sensor[g][1])
+            {
+                sensor[g][0] = 0;
+            }
             if (x == sensor[g][0] && y == sensor[g][1])
             {
                 sensor[g][0] = a - 1;
@@ -89,8 +93,6 @@ int main()
             }
         }
     }
-
-    sensor[0][0] = 0;
 
     flp(h, sensor.size())
     {
