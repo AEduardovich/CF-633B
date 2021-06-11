@@ -1,3 +1,8 @@
+//C. Ray Tracing
+//time limit per test2 seconds
+//memory limit per test256 megabytes
+//inputstandard input
+//outputstandard output
 #include <iostream>
 #include <vector>
 
