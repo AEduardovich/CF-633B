@@ -13,12 +13,13 @@
 int main()
 {
     int m, n, k, p;
-    int x = 1, y = 1;
+    int x = 1, y = 1, a =1;
     int pos_x = 1, pos_y = 1;
 
     std::vector<std::vector<int> > sensor;
     std::vector<std::vector<int> > sequence;
 
+    std::cin >> n >> m;
     std::cin >> k;
 
     unsigned int g = 0;
@@ -37,8 +38,10 @@ int main()
         sequence.pb(r);
     }
 
-    std::cin >> m >> n;
-    int a = 1;
+    if (sensor[0][0] == 1 && sensor[0][1] == 1)
+    {
+        sensor[0][0] = 0;
+    }
 
     bool peak = true;
     while (peak)
@@ -65,7 +68,7 @@ int main()
         }
         flp(g, sensor.size())
         {
-            if(x == 1 && x == sensor[g][0] && y == 1 && y == sensor[g][1])
+            if (x == 1 && x == sensor[g][0] && y == 1 && y == sensor[g][1])
             {
                 sensor[g][0] = 0;
             }
